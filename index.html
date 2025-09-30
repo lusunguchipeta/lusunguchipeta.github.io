@@ -3,243 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lusungu Chipeta | ICT Software Developer</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>Lusungu Chipeta | Software Engineer</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5FBF',
+                        secondary: '#06B6D4',
+                        accent: '#F472B6',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-900 text-white">
-    <!-- Header -->
-    <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-gray-900/95 backdrop-blur-sm">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-white">Lusungu<span class="text-blue-500">Chipeta</span></a>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link hover:text-blue-400 transition-colors duration-300">Home</a>
-                    <a href="#about" class="nav-link hover:text-blue-400 transition-colors duration-300">About</a>
-                    <a href="#services" class="nav-link hover:text-blue-400 transition-colors duration-300">Services</a>
-                    <a href="#projects" class="nav-link hover:text-blue-400 transition-colors duration-300">Projects</a>
-                    <a href="#contact" class="nav-link hover:text-blue-400 transition-colors duration-300">Contact</a>
-                </div>
-
-                <button class="md:hidden text-xl focus:outline-none" id="mobile-menu-button">
-                    <i class="fas fa-bars"></i>
+<body class="bg-gradient-to-br from-light to-gray-100 text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Lusungu Chipeta</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-primary focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
                 </button>
             </div>
-        </nav>
-
+        </div>
         <!-- Mobile Menu -->
-        <div class="md:hidden bg-gray-800/95 backdrop-blur-sm" id="mobile-menu" style="display: none;">
-            <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-                <a href="#home" class="nav-link hover:text-blue-400 transition-colors duration-300 py-2">Home</a>
-                <a href="#about" class="nav-link hover:text-blue-400 transition-colors duration-300 py-2">About</a>
-                <a href="#services" class="nav-link hover:text-blue-400 transition-colors duration-300 py-2">Services</a>
-                <a href="#projects" class="nav-link hover:text-blue-400 transition-colors duration-300 py-2">Projects</a>
-                <a href="#contact" class="nav-link hover:text-blue-400 transition-colors duration-300 py-2">Contact</a>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Skills</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Education</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Contact</a>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-2xl" data-aos="fade-right" data-aos-duration="1000">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    Lusungu <span class="text-blue-500">Chipeta</span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl text-blue-400 mb-8 font-semibold">
-                    ICT Software Developer
-                </h2>
-                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                    Specializing in Flutter, Python, and modern web technologies to create innovative digital solutions that drive business growth and enhance user experiences.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl text-center">
-                        View My Work
-                    </a>
-                    <a href="#contact" class="border-2 border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl text-center">
-                        Get In Touch
-                    </a>
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Lusungu Chipeta</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600">Software Engineering Student</h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        A dedicated and results-driven Software Engineer currently pursuing a Bachelor's Degree in Information and Communication Technology at Daeyang University.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-gradient-to-r from-primary to-secondary hover:from-purple-700 hover:to-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300 shadow-lg">Contact Me</a>
+                        <a href="#about" class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition duration-300">Learn More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                                <span class="text-white text-6xl font-bold">LC</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg shadow-lg">
+                            <span>Available for Internship</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Animated Background Elements -->
-        <div class="absolute top-1/4 right-10% w-1/3 h-1/2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
-        <div class="absolute bottom-1/4 left-10% w-1/4 h-1/3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full filter blur-3xl opacity-20 animate-pulse-slow" style="animation-delay: 2s;"></div>
-        
-        <!-- Floating Icons -->
-        <div class="absolute top-20 right-20 text-blue-400 opacity-30 text-6xl animate-float">
-            <i class="fab fa-flutter"></i>
-        </div>
-        <div class="absolute bottom-20 left-20 text-green-400 opacity-30 text-6xl animate-float" style="animation-delay: 1s;">
-            <i class="fab fa-python"></i>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800">
+    <section id="about" class="py-20 bg-gradient-to-b from-white to-gray-100">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right" data-aos-delay="200">
-                    <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-1 transform hover:scale-105 transition-transform duration-300">
-                        <div class="bg-gray-900 rounded-2xl p-8 h-full">
-                            <div class="w-full h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                                <i class="fas fa-user text-white text-8xl"></i>
-                            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0" data-aos="fade-right">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                        <h3 class="text-xl font-semibold mb-4 text-primary">Personal Info</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-user text-secondary w-6 mr-2"></i>
+                                <span class="text-gray-600 w-24">Name:</span>
+                                <span class="font-medium">Lusungu Chipeta</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope text-secondary w-6 mr-2"></i>
+                                <span class="text-gray-600 w-24">Email:</span>
+                                <span class="font-medium">luechipeta@gmail.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone text-secondary w-6 mr-2"></i>
+                                <span class="text-gray-600 w-24">Phone:</span>
+                                <span class="font-medium">+265 (0) 982331414</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-secondary w-6 mr-2"></i>
+                                <span class="text-gray-600 w-24">Location:</span>
+                                <span class="font-medium">Lilongwe, Malawi</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-flag text-secondary w-6 mr-2"></i>
+                                <span class="text-gray-600 w-24">Nationality:</span>
+                                <span class="font-medium">Malawian</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">My Journey & Objective</h3>
+                    <p class="text-gray-600 mb-6">
+                        I'm a passionate software engineering student with a strong foundation in software development principles and practical experience in building responsive web and mobile applications. Adept at transforming user needs into technical solutions and passionate about learning new technologies to solve real-world problems.
+                    </p>
+                    <div class="bg-gradient-to-r from-primary/10 to-secondary/10 p-6 rounded-xl mb-6 border-l-4 border-primary">
+                        <h4 class="font-semibold text-primary mb-2">Career Objective</h4>
+                        <p class="text-gray-600">
+                            To obtain a software engineering internship or junior developer position where I can apply my academic knowledge and growing programming skills to contribute to the success of a forward-thinking organization. Eager to gain hands-on experience, learn from professionals, and build innovative digital solutions that meet user needs.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white px-4 py-3 rounded-lg shadow-md border border-gray-100">
+                            <span class="text-primary font-bold">ICT</span> Student
+                        </div>
+                        <div class="bg-white px-4 py-3 rounded-lg shadow-md border border-gray-100">
+                            <span class="text-primary font-bold">Flutter</span> Developer
+                        </div>
+                        <div class="bg-white px-4 py-3 rounded-lg shadow-md border border-gray-100">
+                            <span class="text-primary font-bold">Web</span> Technologies
                         </div>
                     </div>
                 </div>
-                
-                <div data-aos="fade-left" data-aos-delay="400">
-                    <h3 class="text-3xl font-bold mb-6 text-blue-400">Innovative Developer with a Passion for Technology</h3>
-                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
-                        I'm Lusungu Chipeta, a dedicated ICT Software Developer with expertise in Flutter for cross-platform mobile applications, Python for backend development and data analysis, and modern web technologies for creating responsive and dynamic websites.
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mr-4 shadow-md">
+                            <i class="fas fa-code text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Programming Languages</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Strong foundation in multiple programming languages for web and mobile development.
                     </p>
-                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
-                        With a strong foundation in computer science and years of practical experience, I specialize in turning complex problems into simple, beautiful, and intuitive solutions. I'm passionate about staying up-to-date with the latest industry trends and technologies.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-3">
-                        <span class="skill-tag">Flutter</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
                         <span class="skill-tag">Dart</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Django</span>
                         <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">UI/UX Design</span>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mr-4 shadow-md">
+                            <i class="fas fa-mobile-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Mobile Development</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Building cross-platform mobile applications with modern frameworks and tools.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Android Studio</span>
+                        <span class="skill-tag">UI/UX Principles</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center mr-4 shadow-md">
+                            <i class="fas fa-tools text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Tools & Platforms</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Utilizing modern development tools and methodologies for efficient workflow.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Visual Studio Code</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Strengths -->
+            <div class="mt-16" data-aos="fade-up">
+                <h3 class="text-2xl md:text-3xl font-bold text-center mb-10">Personal Strengths</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-5 rounded-xl shadow-md border border-gray-100 text-center">
+                        <i class="fas fa-bolt text-secondary text-2xl mb-3"></i>
+                        <h4 class="font-semibold text-gray-800 mb-2">Quick Learner</h4>
+                        <p class="text-gray-600 text-sm">Adaptable and eager to learn new technologies</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md border border-gray-100 text-center">
+                        <i class="fas fa-lightbulb text-secondary text-2xl mb-3"></i>
+                        <h4 class="font-semibold text-gray-800 mb-2">Creative Problem Solver</h4>
+                        <p class="text-gray-600 text-sm">Finding innovative solutions to complex challenges</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-xl shadow-md border border-gray-100 text-center">
+                        <i class="fas fa-comments text-secondary text-2xl mb-3"></i>
+                        <h4 class="font-semibold text-gray-800 mb-2">Strong Communication</h4>
+                        <p class="text-gray-600 text-sm">Excellent interpersonal and collaboration skills</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-900">
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">My Services</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Education</h2>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon bg-blue-600">
-                        <i class="fab fa-flutter"></i>
+            <!-- Current Education -->
+            <div class="mb-12" data-aos="fade-right">
+                <div class="bg-gradient-to-r from-primary to-secondary text-white p-6 rounded-xl shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold">Bachelor's Degree in Information and Communication Technology</h3>
+                            <p class="text-lg opacity-90">Daeyang University, Lilongwe</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 bg-white text-primary px-4 py-2 rounded-lg font-semibold">
+                            2022 – Present
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Flutter Development</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Create beautiful, high-performance cross-platform mobile applications for iOS and Android using Flutter framework.
-                    </p>
                 </div>
                 
-                <!-- Service 2 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon bg-green-600">
-                        <i class="fab fa-python"></i>
+                <div class="mt-6 pl-6 border-l-4 border-primary">
+                    <h4 class="text-xl font-semibold text-gray-800 mb-4">Core Courses Covered:</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <i class="fas fa-laptop-code text-primary mb-2"></i>
+                            <p class="font-medium">Introduction to Programming</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <i class="fas fa-globe text-primary mb-2"></i>
+                            <p class="font-medium">Web Technologies</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <i class="fas fa-mobile text-primary mb-2"></i>
+                            <p class="font-medium">Mobile Applications Development</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <i class="fas fa-database text-primary mb-2"></i>
+                            <p class="font-medium">Data Structures & Algorithms</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <i class="fas fa-cube text-primary mb-2"></i>
+                            <p class="font-medium">Object-Oriented Programming</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <i class="fas fa-project-diagram text-primary mb-2"></i>
+                            <p class="font-medium">Software Engineering</p>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Python Development</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Build robust backend systems, APIs, data analysis tools, and automation scripts using Python and its extensive ecosystem.
-                    </p>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-icon bg-purple-600">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Web Development</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Design and develop responsive, modern websites and web applications using the latest frontend and backend technologies.
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">My Projects</h2>
             
-            <div class="flex justify-center mb-12 flex-wrap gap-4" data-aos="fade-up" data-aos-delay="200">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="flutter">Flutter</button>
-                <button class="filter-btn" data-filter="python">Python</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="flutter" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="project-image bg-gradient-to-br from-blue-600 to-purple-600">
-                        <i class="fas fa-mobile-alt text-white text-6xl"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="text-xl font-bold mb-3 text-white">E-Commerce Mobile App</h3>
-                        <p class="text-gray-300 mb-4">
-                            A feature-rich e-commerce application built with Flutter, featuring product catalog, shopping cart, user authentication, and payment integration.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">Dart</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Stripe API</span>
+            <!-- Previous Education -->
+            <div data-aos="fade-left">
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-md">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800">Malawi School Certificate of Education (MSCE)</h3>
+                            <p class="text-gray-600">Maranatha Girls Academy</p>
                         </div>
-                        <div class="flex gap-3">
-                            <a href="#" class="project-link bg-blue-600 hover:bg-blue-700">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card" data-category="python" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="project-image bg-gradient-to-br from-green-600 to-blue-600">
-                        <i class="fas fa-chart-line text-white text-6xl"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="text-xl font-bold mb-3 text-white">Data Analysis Dashboard</h3>
-                        <p class="text-gray-300 mb-4">
-                            A Python-based data analysis tool that processes large datasets and presents insights through an interactive dashboard with visualizations.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Matplotlib</span>
-                            <span class="tech-tag">Flask</span>
-                        </div>
-                        <div class="flex gap-3">
-                            <a href="#" class="project-link bg-blue-600 hover:bg-blue-700">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card" data-category="web" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="project-image bg-gradient-to-br from-purple-600 to-pink-600">
-                        <i class="fas fa-laptop-code text-white text-6xl"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3 class="text-xl font-bold mb-3 text-white">Portfolio Website</h3>
-                        <p class="text-gray-300 mb-4">
-                            A responsive portfolio website built with modern web technologies, featuring smooth animations and optimized performance.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">GSAP</span>
-                        </div>
-                        <div class="flex gap-3">
-                            <a href="#" class="project-link bg-blue-600 hover:bg-blue-700">View Details</a>
+                        <div class="mt-4 md:mt-0 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-semibold">
+                            2021
                         </div>
                     </div>
                 </div>
@@ -248,67 +308,72 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900">
+    <section id="contact" class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">Get In Touch</h2>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <div data-aos="fade-right" data-aos-delay="200">
-                    <h3 class="text-3xl font-bold mb-6 text-blue-400">Let's Talk About Your Project</h3>
-                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
-                        I'm currently available for freelance work and exciting new opportunities. Feel free to reach out if you have a project in mind or just want to connect!
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16" data-aos="fade-up">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Let's work together</h3>
+                    <p class="text-gray-600 mb-8">
+                        I'm currently seeking internship opportunities and exciting projects where I can apply my skills and continue learning. 
+                        Whether you have a question or just want to say hi, feel free to reach out!
                     </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="contact-icon bg-blue-600">
-                                <i class="fas fa-envelope"></i>
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-semibold text-white">Email</h4>
-                                <p class="text-gray-300">lusungu.chipeta@example.com</p>
+                                <p class="text-gray-500 text-sm">Email</p>
+                                <p class="font-medium">luechipeta@gmail.com</p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="contact-icon bg-green-600">
-                                <i class="fas fa-phone"></i>
+                        <div class="flex items-center bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-semibold text-white">Phone</h4>
-                                <p class="text-gray-300">+1 (555) 123-4567</p>
+                                <p class="text-gray-500 text-sm">Phone</p>
+                                <p class="font-medium">+265 (0) 982331414</p>
                             </div>
                         </div>
-                        
-                        <div class="flex items-center space-x-4">
-                            <div class="contact-icon bg-purple-600">
-                                <i class="fas fa-map-marker-alt"></i>
+                        <div class="flex items-center bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="text-lg font-semibold text-white">Location</h4>
-                                <p class="text-gray-300">Lilongwe, Malawi</p>
+                                <p class="text-gray-500 text-sm">Location</p>
+                                <p class="font-medium">Lilongwe, Malawi</p>
                             </div>
                         </div>
                     </div>
+                    <div class="flex space-x-4 mt-8">
+                        <a href="mailto:luechipeta@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-                
-                <div data-aos="fade-left" data-aos-delay="400">
-                    <form class="contact-form bg-gray-800 rounded-2xl p-8">
-                        <div class="mb-6">
-                            <input type="text" placeholder="Your Name" class="form-input" required>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left" data-aos-delay="200">
+                    <form class="space-y-6 bg-white p-8 rounded-xl shadow-md border border-gray-200">
+                        <div>
+                            <label for="name" class="block text-gray-600 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300" placeholder="John Doe">
                         </div>
-                        <div class="mb-6">
-                            <input type="email" placeholder="Your Email" class="form-input" required>
+                        <div>
+                            <label for="email" class="block text-gray-600 mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300" placeholder="john@example.com">
                         </div>
-                        <div class="mb-6">
-                            <input type="text" placeholder="Subject" class="form-input" required>
+                        <div>
+                            <label for="message" class="block text-gray-600 mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300" placeholder="Hello, I would like to discuss..."></textarea>
                         </div>
-                        <div class="mb-6">
-                            <textarea placeholder="Your Message" class="form-input h-32" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
-                            Send Message
-                        </button>
+                        <button type="submit" class="bg-gradient-to-r from-primary to-secondary hover:from-purple-700 hover:to-cyan-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300 w-full shadow-lg">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -316,27 +381,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 py-12">
+    <footer class="bg-gradient-to-r from-primary to-secondary text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="#" class="social-link bg-gray-700 hover:bg-blue-600">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="social-link bg-gray-700 hover:bg-gray-600">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-link bg-gray-700 hover:bg-blue-400">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-link bg-gray-700 hover:bg-pink-600">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <p class="text-gray-400">&copy; 2023 Lusungu Chipeta. All Rights Reserved.</p>
+            <p>© 2023 Lusungu Chipeta. All rights reserved.</p>
+            <p class="mt-2 text-white/80">Daeyang University - Bachelor of Information and Communication Technology</p>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
     <script src="main.js"></script>
 </body>
 </html>
